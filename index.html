@@ -1,40 +1,159 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Basic Website</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 50px;
-        }
-        header {
-            background-color: #f8f9fa;
-            padding: 20px;
-            font-size: 24px;
-            font-weight: bold;
-        }
-        section {
-            margin: 20px;
-        }
-        footer {
-            margin-top: 20px;
-            font-size: 14px;
-            color: #666;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        Welcome to My Website
-    </header>
-    <section>
-        <p>This is a basic HTML website with simple styling.</p>
-    </section>
-    <footer>
-        &copy; 2025 My Website
-    </footer>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>A + R Wedding</title>
+        <link rel="stylesheet" href="style.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300;400;700&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <header>
+            <div class="heading-container">
+                <span class="heading-subsection">4th October 2025</span>
+                <span class="heading-center">A + R</span>
+                <span class="heading-subsection">Merry Wedding</span>
+            </div>
+            <hr class="white-line" />
+        </header>
+
+        <section class="countdown">
+            <div>
+                <div id="timer">
+                    <span id="days"><br /></span>
+                    <span id="hours"><br /></span>
+                    <span id="minutes"><br /></span>
+                    <span id="seconds"><br /></span>
+                </div>
+                <div id="timer-titles">
+                    <span>Days</span>
+                    <span>Hours</span>
+                    <span>Minutes</span>
+                    <span>Seconds</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="location">
+            <hr class="white-line" />
+            <h2>Where 'bouts?</h2>
+            <div class="grid">
+                <div class="flex">
+                    <p>Fingask Castle<br />Rait, Perth<br />PH2 7SA</p>
+                </div>
+                <div>
+                    <img src="img/fingask.png" class="map" usemap="#workmap" />
+
+                    <map name="workmap">
+                        <area
+                            shape="circle"
+                            coords="150,200,80"
+                            alt="Fingask"
+                            href="https://maps.app.goo.gl/ZvipgsqnLEXgqkvj7"
+                            target="_blank"
+                        />
+                    </map>
+                </div>
+            </div>
+
+            <hr class="white-line" />
+        </section>
+
+        <section class="gallery">
+            <img src="img/blackpool.png" alt="Us in Blackpool" />
+            <img
+                src="img/engaged.png"
+                alt="We got engaged"
+                class="center-img"
+            />
+            <img src="img/polaroid.png" alt="Polaroid of us" />
+        </section>
+
+        <section class="date">
+            <hr class="white-line" />
+            <h2>When 'bouts?</h2>
+            <p>Saturday<br />4th October 2025</p>
+            <hr class="white-line" />
+        </section>
+
+        <section class="gallery">
+            <img src="img/blackpool.png" alt="Us in Blackpool" />
+            <img
+                src="img/engaged.png"
+                alt="We got engaged"
+                class="center-img"
+            />
+            <img src="img/polaroid.png" alt="Polaroid of us" />
+        </section>
+
+        <section class="date">
+            <hr class="white-line" />
+            <h2>Useful Information</h2>
+            <div class="info flex">
+                <div>
+                    <ul>
+                        <li>Careful of Pothole when driving in</li>
+                        <li>Currently looking into Taxis or a Minibus</li>
+                        <li>Dress Code: It's a wedding?</li>
+                        <li>No Still-Eh-Toes if possible</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li>Careful of Pothole when driving in</li>
+                        <li>Currently looking into Taxis or a Minibus</li>
+                        <li>Dress Code: It's a wedding?</li>
+                        <li>No Still-Eh-Toes if possible</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="white-line" />
+        </section>
+
+        <section class="gallery">
+            <img src="img/blackpool.png" alt="Us in Blackpool" />
+            <img
+                src="img/engaged.png"
+                alt="We got engaged"
+                class="center-img"
+            />
+            <img src="img/polaroid.png" alt="Polaroid of us" />
+        </section>
+
+        <section class="date">
+            <hr class="white-line" />
+            <p>Made with blood, sweat and GPTears</p>
+            <p>Love from Archie and Reanna</p>
+            <p>Hope to see you there (if you're invited)</p>
+        </section>
+
+        <script>
+            function countdown() {
+                const weddingDate = new Date(
+                    "October 04, 2025 13:00:00",
+                ).getTime();
+                const x = setInterval(function () {
+                    const now = new Date().getTime();
+                    const distance = weddingDate - now;
+                    document.getElementById("days").innerText = Math.floor(
+                        distance / (1000 * 60 * 60 * 24),
+                    );
+                    document.getElementById("hours").innerText = Math.floor(
+                        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+                    );
+                    document.getElementById("minutes").innerText = Math.floor(
+                        (distance % (1000 * 60 * 60)) / (1000 * 60),
+                    );
+                    document.getElementById("seconds").innerText = Math.floor(
+                        (distance % (1000 * 60)) / 1000,
+                    );
+                    if (distance < 0) clearInterval(x);
+                }, 100);
+            }
+            countdown();
+        </script>
+    </body>
 </html>
