@@ -142,6 +142,11 @@ p {
         z-index: 1; /* Ensure the center image is on top */
         margin: 20px 0; /* Add spacing for the center image */
     }
+
+    .grid {
+        flex-direction: column; /* Stack divs vertically */
+        align-items: center; /* Center the content */
+    }
 }
 
 @media (min-width: 600px) {
@@ -194,7 +199,7 @@ p {
 }
 
 .rsvp-button {
-    background-color: rgba(255, 255, 255, 0.2); /* White with 30% transparency */
+    background-color: rgba(255, 255, 255, 0.2); /* White with 20% transparency */
     border: 2px solid white; /* White border */
     color: white;
     padding: 15px 32px;
