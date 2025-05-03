@@ -29,7 +29,7 @@ header {
 }
 
 h2 {
-    font-size: 40px;
+    font-size: 36px;
 }
 
 p {
@@ -47,7 +47,7 @@ p {
     display: flex;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     #timer span {
         display: inline-block;
         width: 15vw;
@@ -95,10 +95,13 @@ p {
 }
 
 .gallery {
+    position: relative; /* Establish stacking context */
+    z-index: 0; /* Ensure it doesn't overlap other elements */
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 50px;
+    margin: 50px 0; /* Add spacing above and below the gallery */
 }
 
 .gallery img {
@@ -119,7 +122,28 @@ p {
     .heading-subsection {
         display: none;
     }
+
+    .gallery {
+        display: flex;
+        flex-direction: column; /* Stack images vertically */
+        align-items: center;
+        position: relative;
+    }
+
+    .gallery img {
+        width: auto;
+        height: 250px; /* Smaller height for non-center images */
+        margin: -80px 0; /* Overlap images slightly */
+        z-index: 2;
+    }
+
+    .gallery img.center-img {
+        height: 300px; /* Keep the center image larger */
+        z-index: 1; /* Ensure the center image is on top */
+        margin: 20px 0; /* Add spacing for the center image */
+    }
 }
+
 @media (min-width: 600px) {
     .heading-subsection {
         font-size: 20px;
