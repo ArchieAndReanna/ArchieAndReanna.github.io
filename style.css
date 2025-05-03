@@ -6,6 +6,7 @@ body {
     padding: 0;
     font-family: "Inria Serif", serif;
     position: relative;
+    overflow-x: hidden;
 }
 
 body::before {
@@ -16,8 +17,10 @@ body::before {
     width: 100vw;
     height: 100vh;
     background-image: url("img/background.jpg");
+    background-position: center center; /* Center the image */
+    background-size: cover; /* Ensure the image covers the entire viewport */
     z-index: -1;
-  }
+}
 
 header {
     padding-top: 5px;
