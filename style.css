@@ -192,3 +192,19 @@ p {
 .flex {
     display: flex;
 }
+
+.rsvp-button {
+    background-color: rgba(255, 255, 255, 0.2); /* White with 30% transparency */
+    border: 2px solid white; /* White border */
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 32px; /* Match the paragraph font size */
+    margin: 4px 2px;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    border-radius: 12px; /* Rounded edges */
+    margin: 40px;
+}
