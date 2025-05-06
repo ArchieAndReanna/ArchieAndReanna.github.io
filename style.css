@@ -1,3 +1,7 @@
+html {
+    overflow-x: hidden;
+}
+
 body {
     font-family: "Inria Serif", serif;
     text-align: center;
@@ -5,7 +9,6 @@ body {
     margin: 0;
     padding: 0;
     position: relative;
-    overflow-x: hidden;
     background-image: url("img/background.jpg");
     background-position: center center;
     background-size: cover;
