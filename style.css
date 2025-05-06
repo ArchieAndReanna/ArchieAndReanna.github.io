@@ -21,10 +21,16 @@ h2 {
     font-size: 36px;
 }
 
+h3 {
+    font-size: 30px;
+    margin: 14px;
+    margin-top: 20px;
+}
+
 p {
-    font-size: 32px;
+    font-size: 24px;
     margin: 0;
-    padding: 20px;
+    padding: 10px;
 }
 
 .countdown {
@@ -172,11 +178,28 @@ p {
 }
 
 .info div {
-    margin-inline: 20px;
+    margin-inline: 10px;
 }
 
 .flex {
     display: flex;
+}
+
+.information {
+    justify-content: center;
+    display: flex;
+}
+
+.information div {
+    max-width: 1000px;
+}
+
+.m-20 {
+    margin: 20px;
+}
+
+.m-40 {
+    margin: 40px;
 }
 
 .rsvp-button {
