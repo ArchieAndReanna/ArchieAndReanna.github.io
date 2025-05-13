@@ -5,7 +5,7 @@
  * Leave now and just be happy that it works. 
  */
 
-html {
+html, body {
     overflow-x: hidden;
 }
 
